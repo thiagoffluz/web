@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    <style>
+
+        body {
+            background-color: rgb(189, 163, 167);
+
+        }
+
+        .container {
+            overflow: auto;
+        }
+
+        #painel {
+            float: none;
+            width: auto;
+        }
+
+        #menu-lista {     
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-item {
+            background-color: rgb(143, 135, 153);
+            border: 1px solid #bbbb7b;
+            border-radius: 4px;
+            list-style-type: none;
+            margin: 4px;
+            padding: 10px;
+        }
+
+        .menu-item:hover {
+            cursor: pointer;
+        }
+
+        #principal {
+            margin-left: 4px;
+            }
+
+        /* media query */
+        @media (min-width: 480px) {
+            body {
+                background-color: aliceblue;
+            }
+
+            #painel {
+                width: 200px;
+                float: left;
+            }
+
+            #principal {
+                margin-left: 216px;
+            }
+        }
+
+        @media (min-width: 600px) {
+            body {
+                background-color: #adadad;
+            }
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="painel">
+
+            <ul id="menu-lista">
+
+                <li class="menu-item">1</li>
+                <li class="menu-item">2</li>
+                <li class="menu-item">3</li>
+                <li class="menu-item">4</li>
+                <li class="menu-item">5</li>
+            </ul>
+        </div>
+
+
+        <div id="principal">
+            <h1>Redimensione o navegador para ver o efeito da media query</h1>
+            <p>Quando a janela do navegador ficar com largura menor que 480px o menu flutuará à esquerda da página</p>
+        </div>
+
+
+
+
+    </div>
+</body>
+</html>
