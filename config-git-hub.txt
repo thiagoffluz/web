@@ -1,0 +1,9 @@
+git config --local user.name "Thiago Felipe"
+git config --local user.email "thiagofelipefluz3@gmail.com"
+
+git init
+git add .
+git commit -m "Aula 05"
+git branch -M aula5
+git remote add origin https://github.com/thiagoffluz/web.git
+git push -u origin aula5
