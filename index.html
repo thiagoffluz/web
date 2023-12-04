@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD JS</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    
+    <header>
+        CRUD Javascript 
+    </header>
+
+    <main>
+
+        <form method="post">
+            <div class="entrada-dados">
+                <input id="nome" class="entrada-texto" placeholder="Nome" type="text" required/>
+                <input id="email" class="entrada-texto" placeholder="E-mail" type="email" required/>
+                <input id="fone"class="entrada-texto" placeholder="Telefone" type ="number" required /> 
+                <input id="profissao" class="entrada-texto" placeholder = "Profissão" type="text" required/>
+                <input class="botao-enviar" type = "submit" value="Enviar" onclick="return adicionarNaTabela()"/>
+            </div>
+        </form>
+ 
+        <table id="tabela">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Profissão</th>
+                <th>Ação</th>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>
+
