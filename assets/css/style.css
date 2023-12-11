@@ -1,0 +1,55 @@
+/* Variáveis CSS globais */
+:root {
+
+    --cor-neve:#fffafa; /* snow color */
+    --cor-verde-claro:#e3fbe3; 
+    --cor-verde-musgo:rgba(30, 130, 30, 0.7);
+    --cor-verde-transparente:#e3fbe380;
+    --cor-verde-limao: limegreen;
+    --cor-preto:#000000;
+    --cor-branco: #ffffff;
+    --cor-cinza: #aaaaaa;
+    --cor-dourado:#eb783f;
+
+    --altura-titulo: 2em; /* 1em = 32px */
+    --altura-subtitulo:1.5em;
+}
+
+body{
+    background: var(--cor-neve);
+}
+
+header{
+    background: var(--cor-verde-claro);
+    padding-block: 16px;
+    padding-inline: 16px;
+}
+
+nav{
+    height: 175px;
+    max-width: 1280px;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    gap: 32px;
+    user-select: none;
+}
+
+nav ul a{
+    color: var(--cor-preto);
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul a:hover{
+    color: var(--cor-dourado);
+    text-decoration: underline;
+}
