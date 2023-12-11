@@ -9,7 +9,7 @@ a {
 }
 
 .header {
-    background-color: #879dac;
+    background-color: #7394a7;
     padding-inline: 16px; /* horizontal: 16 pixel esq e 16 pixel direita */
     
 }
@@ -55,13 +55,13 @@ a {
 
 /* conteúdo da pagina */
 .conteudo {
-    height: calc(100vh - 70px); /* calcule a alta do conteúdo */
+    height: calc(100vh - 70px); /* calcule a altura do conteúdo */
     background: center / cover url(bg.jpg);
 }
 
 /* botão hamburguer */
 .hamburguer {
-    display: none;
+    display: none; /* none = esconde */
     background: none;
     border: none;
     /* cria a linha superior do hamburguer */
@@ -79,7 +79,7 @@ a {
     height: 3px;
     margin-top: 5px;
 
-    position: relative 
+    position: relative;
 } 
 
 /*media queries para mobile*/
@@ -107,25 +107,74 @@ a {
         /* usa o máximo da tela */
         width: 100vw;
         height: 100vh;
+
         /* exibe os itens do menu em coluna */
         flex-direction: column;
-        background-color: #879dac;
+        background-color: #2d5772;
         /* alinhamento vertical */
         justify-content: space-around;
         /* alinhamento horizontal */
         align-items: center;
         gap: 0;
+
         /* desativa cliques em elementos ocultos */
         pointer-events: none;
-       /* clip-path: circle(1500px at 90% -15%);*/
+
+        clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out; /*easy-out com final lento */
     }
 
     .nav-list a {
         font-size: 24px;
         /*esconde os links do menu antes do hamburguer ser clicado*/
-        opacity: 0;
+        opacity: 0; 
         /*esconde os links do menu antes do hamburguer ser clicado*/
     }
+
+    .nav-list li:nth-child(1) a{
+        transition: 0.5s 0.2s;
+    }
+
+    .nav-list li:nth-child(2) a{
+        transition: 0.5s 0.4s;
+    }
+
+    .nav-list li:nth-child(3) a{
+        transition: 0.5s 0.6s;
+    }
+
+    /* Estilos ativos (active): Desenha o X do botão hamburguer*/
+    .nav.active .hamburguer {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        /* esconde a linha do topo do hamburguer */
+        border-top-color: transparent;
+    }
+
+    /* rotaciona a linha intermediária do hamburguer */
+    .nav.active .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    /* rotaciona a linha inferior do hamburguer */
+    .nav.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7.7px;
+    }
+
+    .nav.active .nav-list {
+        /* circulo cobre toda a tela */
+        clip-path: circle(1500px at 90% -15%);
+        /* Permite acessar todos os recursos da tela*/
+        pointer-events: all;
+    }
+
+    .nav.active .nav-list a {
+        /* mostra os links do menu */
+        opacity: 1;
+    }
 }
+
+    
 
