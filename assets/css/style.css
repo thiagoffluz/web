@@ -10,7 +10,9 @@
     --cor-branco: #ffffff;
     --cor-cinza: #aaaaaa;
     --cor-dourado:#eb783f;
-
+    --cor-texto: #212529;
+    --cor-cinza-escuro: #000000b0;
+    --cor-cinza-claro:#dcdcdc;
     --altura-titulo: 2em; /* 1em = 32px */
     --altura-subtitulo:1.5em;
 }
