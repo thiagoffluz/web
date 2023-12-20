@@ -10,21 +10,20 @@
 */
 
 .section-empresa {
-    border: 1px solid red;
     max-width: 940px;
     margin-inline: auto;
     text-align: justify;
     padding-top: 2em; /* 2x a altura padrão da fonte*/
     padding-inline: 1em; /* enchimento horizontal*/
     user-select: none;
-
 }
 
 .section-empresa h2 {
     text-align: center;
-    font: var(--altura-titulo);
+    font-size: var(--altura-titulo);
     margin: 9 9 1em;
-    color: VAR(--cor-verde-musgo)
+    color: VAR(--cor-verde-musgo);
+    margin-bottom: 10px;
 }
 
 .section-empresa g2::first-letter {

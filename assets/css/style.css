@@ -17,8 +17,13 @@
     --altura-subtitulo:1.5em;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&family=Roboto:wght@100&family=Ubuntu+Mono:ital@0;1&display=swap');
+
+
 body{
     background: var(--cor-neve);
+    font-family: 'Roboto', sans-serif;
 }
 
 header{
@@ -72,6 +77,12 @@ footer p {
     margin-top: 16px;
     cursor: default;
     user-select: none;
+}
+
+.icone-fa {
+    color: var(--cor-verde-musgo);
+    font-size: 0.9em;
+    margin-left: 0.2em;
 }
 
 /* ----------------------------------- */
