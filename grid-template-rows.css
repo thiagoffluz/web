@@ -1,0 +1,45 @@
+body {
+    font-family: monospace;
+    color: #333;
+    margin: 20px 100px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.25em;
+    margin-top: 50px;
+}
+
+section > div {
+    margin-block: 5px;
+    background: tomato;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.grid-2-linhas {
+    display: grid; /* ou inline-grid */
+    background: lightblue;
+    /* configura somente as duas primeiras linhas */
+    grid-template-rows: 100px 100px;
+}
+
+.grid-4-linhas {
+    display: grid; /* ou inline-grid */
+    background: lightgreen;
+    /* configura as 4 linhas */
+    grid-template-rows: 50px 100px 50px 150px;
+}
+
+.grid-4-linhas-fracao {
+    display: grid; /* ou inline-grid */
+    background: lightblue;
+    /* configura as 4 linhas */
+    grid-template-rows: 1fr 2fr 1fr 3fr;
+}
+
+.grid-3-linhas-auto {
+    display: grid; /* ou inline-grid */
+    background: lightgreen;
+    grid-template-rows: 100px 200px auto;
+}

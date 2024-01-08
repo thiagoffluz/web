@@ -1,0 +1,93 @@
+body {
+    font-family: monospace;
+    color: #333;
+    margin: 20px 100px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.25em;
+    margin-top: 50px;
+}
+
+section > div {
+    margin-block: 5px;
+    background: tomato;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.grid {
+    display: grid;
+    gap: 10px;
+    background: gray;
+    padding: 10px;
+}
+
+.item-logo {
+    grid-area: logo;
+}
+
+.item-nav {
+    grid-area: nav;
+}
+
+.item-main {
+    grid-area: main;
+}
+
+.item-advert {
+    grid-area: advert;
+}
+
+.item-menu {
+    grid-area: menu;
+}
+
+.item-footer {
+    grid-area: footer;
+}
+
+.areas-1 {
+    grid-template-areas: 
+        'logo nav nav'
+        'menu main advert'
+        'menu main footer';
+    background: lightgreen;
+}
+
+.areas-2 {
+    grid-template-areas: 
+        'menu nav nav'
+        'menu main advert'
+        'menu main footer';
+    background: lightblue;
+}
+
+.areas-3 {
+    grid-template-areas: 
+        'logo logo'
+        'nav nav'
+        'main main'
+        'menu advert'
+        'footer footer';
+    background: lightblue;
+}
+
+.areas-4 {
+    grid-template-columns: 30% 59% 10%;
+    grid-template-rows: 50px 150px 50px;
+    grid-template-areas: 
+    'logo nav nav'
+    'menu main advert'
+    'menu footer footer';
+    background: lightblue;
+}    
+
+.areas-5 {
+    grid-template-areas: 
+        'logo main nav'
+        '.    main   advert'
+        'menu footer .';
+    background: lightblue;
+}
