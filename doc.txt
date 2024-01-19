@@ -1,0 +1,8 @@
+1. Para transformar a pasta em um projeto Node 35:
+npm init -y
+
+2. instalar o Express - servidor de http
+npm install express
+
+3. instalar o driver do mysql
+npm install mysql2
