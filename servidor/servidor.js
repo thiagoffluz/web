@@ -1,4 +1,4 @@
-import { buscarPorId, listarProdutos, inserirProdutos, atualizarProduto, apagarProduto } from "./db.js"
+import { buscarPorId, listarProdutos, inserirProdutos, atualizarProduto, apagarProduto, listarPorCategoria } from "./db.js"
 import express from 'express'
 import bodyParser from 'body-parser'
 
@@ -30,8 +30,18 @@ server.get('/', async(req, res) => {
 server.get('/produtos', async(req, res) => {
     const produtos = await listarProdutos() 
     res.status(200).json(produtos)
+    console.log('Chamou /produtos/categoria')
 }) 
- 
+
+// lista produtos por categoria: categoria 0, 1 ou 2
+// GET: http://localhost:3000/produtos/categoria/0 
+server.get('/produtos/categoria/:categoria', async(req, res) => {
+    // extrai da url o número da categoria: 0, 1, 2
+    const {categoria} = req.params
+    const produtos = await listarPorCategoria(categoria)
+    res.status(200).json(produtos)
+})
+
 
 // apaga um produto por id
 // DELETE: http://localhost:3000/produtos/1
@@ -50,6 +60,22 @@ server.post('/produtos', async(req, res) => {
     const retorno = await inserirProdutos(produto)
     // devolve uma resposta = true or false
     return res.status(200).json({'retorno': retorno.affectedRows == 1})
+})
+
+// retorna um produto por id
+// GET: http://localhost:3000/produtos/1
+server.get('/produtos/:id', async(req, res) => {
+    const {id} = req.params
+    const produto = await buscarPorId(id) 
+    res.status(200).json(produto)
+})
+
+// atualiza um produto
+// PUT: http://localhost:3000/produtos
+server.put('/produtos', async(req, res) => {
+    const produto = req.body
+    const retorno = await atualizarProduto(produto)
+    res.status(200).json({'retorno' : retorno.affectedRows == 1})
 })
 
 

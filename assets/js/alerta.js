@@ -3,4 +3,8 @@ const alerta_erro = (msg) => {
     alerta.hidden = false
     alerta.innerHTML = msg
 
+    setTimeout(() => {
+        alerta.hidden = true
+        alerta.innerHTML = ''
+    }, 5000)
 }

@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', () =>  {
 
-    let url = 'http://localhost:3000/produtos'
+    // lê o valor do parâmetro categoria a partir de um url
+    // Exemplo: http://localhost:5500/index?categoria=0
+    const urlParams = new URLSearchParams(window.location.search)
+    const categoria = urlParams.get('categoria') // 0, 1, 2
+    let url
+
+    if (categoria == null)
+        url = 'http://localhost:3000/produtos'
+    else
+        url = 'http://localhost:3000/produtos/categoria/' + categoria
 
     // solicita ao servidor a lista de todos os produtos ou por categoria
     fetch(url)

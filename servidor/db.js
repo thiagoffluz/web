@@ -33,6 +33,13 @@ export async function listarProdutos() {
     return dados
 }
 
+export async function listarPorCategoria(categoria) {
+    const con = await conectar()
+    const sql = 'SELECT * FROM Produtos WHERE categoria =?'
+    const [lista] = await con.query(sql, categoria)
+    return lista
+}
+
 export async function inserirProdutos(produto) {
     const con = await conectar()
     const sql = 'INSERT INTO Produtos (descricao, categoria, preco, quantidade, url) VALUES (?, ?, ?, ?, ?)'
